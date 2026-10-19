@@ -59,16 +59,16 @@ body {
   padding-block: 0;
 }
 
-.page { max-width: 1600px; margin: 0 auto; }
+.page { max-width: 1920px; margin: 0 auto; }
 
 header { text-align: center; padding: 20px 0 10px; }
 header h1 {
   font-family: 'Crimson Pro', Georgia, serif;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700; letter-spacing: 0.01em;
 }
 header p {
-  font-size: 0.82rem; color: var(--fg-muted); margin-top: 4px;
+  font-size: 0.95rem; color: var(--fg-muted); margin-top: 4px;
   font-family: 'Crimson Pro', Georgia, serif; font-style: italic;
 }
 
@@ -80,23 +80,23 @@ header p {
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
-  flex: 0 0 auto; padding: 8px 16px; border-radius: 6px;
+  flex: 0 0 auto; padding: 10px 20px; border-radius: 6px;
   border: 1px solid var(--border); background: var(--surface);
-  color: var(--fg-muted); font: 500 0.8rem/1 'Inter', sans-serif;
+  color: var(--fg-muted); font: 500 0.9rem/1 'Inter', sans-serif;
   cursor: pointer; white-space: nowrap; transition: all 0.15s;
 }
 .tab:hover { background: var(--surface-hover); color: var(--fg); }
 .tab.active { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 
 .phase-heading {
-  font-family: 'Crimson Pro', serif; font-size: 1.15rem; font-weight: 600;
+  font-family: 'Crimson Pro', serif; font-size: 1.3rem; font-weight: 600;
   padding: 8px 0 12px; min-height: 2.2rem;
 }
 
 /* ── Layout: map + event list ── */
 .content {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 420px;
   gap: 16px;
   align-items: start;
 }
@@ -114,7 +114,7 @@ header p {
 .event-marker:hover .marker-ring { stroke-width: 3; }
 .marker-ring { transition: stroke-width 0.15s; }
 .marker-label {
-  font: 600 8px/1 'Inter', sans-serif;
+  font: 600 9px/1 'Inter', sans-serif;
   fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 3px;
   pointer-events: none;
 }
@@ -125,26 +125,26 @@ header p {
 
 /* ── Event list (sidebar) ── */
 .event-list {
-  display: flex; flex-direction: column; gap: 8px;
-  max-height: 520px; overflow-y: auto; padding-right: 4px;
+  display: flex; flex-direction: column; gap: 10px;
+  max-height: 600px; overflow-y: auto; padding-right: 4px;
 }
 .event-card {
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px 14px; cursor: pointer;
+  border-radius: 8px; padding: 16px 18px; cursor: pointer;
   transition: all 0.15s; position: relative;
 }
 .event-card:hover { background: var(--surface-hover); border-color: var(--fg-muted); }
 .event-card.highlighted { border-color: var(--accent); background: var(--surface-hover); }
 .event-card .year {
-  font-family: 'Crimson Pro', serif; font-size: 0.78rem;
+  font-family: 'Crimson Pro', serif; font-size: 0.9rem;
   font-weight: 600; color: var(--accent);
 }
 .event-card .name {
-  font-family: 'Crimson Pro', serif; font-size: 1rem;
-  font-weight: 600; line-height: 1.3; margin-top: 2px;
+  font-family: 'Crimson Pro', serif; font-size: 1.15rem;
+  font-weight: 600; line-height: 1.3; margin-top: 3px;
 }
 .event-card .summary {
-  font-size: 0.78rem; color: var(--fg-muted); line-height: 1.5;
+  font-size: 0.9rem; color: var(--fg-muted); line-height: 1.55;
   margin-top: 6px;
 }
 .event-card .countries-row {
@@ -152,7 +152,7 @@ header p {
 }
 .country-pip {
   display: inline-flex; align-items: center; gap: 3px;
-  font-size: 0.68rem; color: var(--fg-muted);
+  font-size: 0.78rem; color: var(--fg-muted);
 }
 .country-pip .dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -162,14 +162,14 @@ header p {
 /* Expanded detail inside the card */
 .event-detail {
   margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border);
-  font-size: 0.82rem; line-height: 1.65; color: var(--fg);
+  font-size: 0.95rem; line-height: 1.7; color: var(--fg);
   font-family: 'Crimson Pro', serif;
 }
 .event-detail .connections {
-  margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 0.75rem;
+  margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 0.85rem;
 }
 .event-detail .connections strong {
-  display: block; font-size: 0.68rem; text-transform: uppercase;
+  display: block; font-size: 0.78rem; text-transform: uppercase;
   letter-spacing: 0.06em; color: var(--fg-muted); margin-bottom: 4px;
 }
 .conn-link {
@@ -180,8 +180,8 @@ header p {
 
 /* ── Legend ── */
 .legend {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0;
-  font-size: 0.7rem; color: var(--fg-muted);
+  display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 12px 0;
+  font-size: 0.82rem; color: var(--fg-muted);
 }
 .legend-item { display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
 .legend-item[style*="cursor"] { border-radius: 4px; padding: 2px 4px; margin: -2px -4px; }
@@ -191,18 +191,18 @@ header p {
   border: 1px solid var(--border);
 }
 .note {
-  font-size: 0.72rem; color: var(--fg-muted); padding-bottom: 24px;
-  line-height: 1.5; font-style: italic;
+  font-size: 0.82rem; color: var(--fg-muted); padding-bottom: 24px;
+  line-height: 1.55; font-style: italic;
 }
 
 /* ── Arrow marker ── */
 
 /* ── Dossier panel ── */
-.dossier-panel { display: none; flex-direction: column; gap: 0; max-height: 520px; overflow-y: auto; padding-right: 4px; }
+.dossier-panel { display: none; flex-direction: column; gap: 0; max-height: 600px; overflow-y: auto; padding-right: 4px; }
 .dossier-panel.active { display: flex; }
 .dossier-back {
   display: inline-flex; align-items: center; gap: 5px;
-  font: 500 0.78rem/1 'Inter', sans-serif; color: var(--accent);
+  font: 500 0.9rem/1 'Inter', sans-serif; color: var(--accent);
   background: none; border: none; cursor: pointer; padding: 6px 0 10px;
 }
 .dossier-back:hover { text-decoration: underline; }
@@ -215,49 +215,49 @@ header p {
   border: 2px solid var(--border); flex-shrink: 0;
 }
 .dossier-title {
-  font-family: 'Crimson Pro', serif; font-size: 1.2rem; font-weight: 700;
+  font-family: 'Crimson Pro', serif; font-size: 1.35rem; font-weight: 700;
   line-height: 1.2;
 }
 .dossier-subtitle {
-  font-size: 0.72rem; color: var(--fg-muted); margin-top: 2px;
+  font-size: 0.82rem; color: var(--fg-muted); margin-top: 2px;
 }
 .dossier-section {
   margin-bottom: 12px;
 }
 .dossier-section h3 {
-  font-family: 'Crimson Pro', serif; font-size: 0.92rem; font-weight: 600;
+  font-weight: 600;
   color: var(--accent); margin-bottom: 6px;
-  text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82rem;
   font-family: 'Inter', sans-serif;
 }
 .dossier-section p, .dossier-section ul {
-  font-family: 'Crimson Pro', serif; font-size: 0.82rem;
-  line-height: 1.65; color: var(--fg);
+  font-family: 'Crimson Pro', serif; font-size: 0.95rem;
+  line-height: 1.7; color: var(--fg);
 }
 .dossier-section ul { padding-left: 18px; margin: 0; }
 .dossier-section li { margin-bottom: 5px; }
 .dossier-section li b { color: var(--fg); }
 .dossier-figure {
-  font-family: 'Crimson Pro', serif; font-size: 0.8rem;
-  line-height: 1.55; color: var(--fg);
-  background: var(--surface); border-radius: 6px; padding: 8px 10px;
-  margin-bottom: 6px; border-left: 3px solid var(--accent);
+  font-family: 'Crimson Pro', serif; font-size: 0.92rem;
+  line-height: 1.6; color: var(--fg);
+  background: var(--surface); border-radius: 6px; padding: 10px 12px;
+  margin-bottom: 8px; border-left: 3px solid var(--accent);
 }
 .dossier-figure .fig-name {
-  font-weight: 700; font-size: 0.84rem;
+  font-weight: 700; font-size: 0.95rem;
 }
 .dossier-figure .fig-role {
-  font-size: 0.72rem; color: var(--fg-muted); font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; color: var(--fg-muted); font-family: 'Inter', sans-serif;
 }
 .dossier-timeline-item {
-  font-family: 'Crimson Pro', serif; font-size: 0.8rem;
-  line-height: 1.5; padding: 6px 10px; border-radius: 6px;
-  background: var(--surface); margin-bottom: 4px; cursor: pointer;
+  font-family: 'Crimson Pro', serif; font-size: 0.92rem;
+  line-height: 1.55; padding: 8px 12px; border-radius: 6px;
+  background: var(--surface); margin-bottom: 5px; cursor: pointer;
   border: 1px solid transparent; transition: all 0.15s;
 }
 .dossier-timeline-item:hover { border-color: var(--accent); background: var(--surface-hover); }
 .dossier-timeline-item .dtl-year {
-  font-family: 'Inter', sans-serif; font-size: 0.72rem;
+  font-family: 'Inter', sans-serif; font-size: 0.82rem;
   font-weight: 600; color: var(--accent);
 }
 .empire-highlight { opacity: 0.3; transition: opacity 0.2s; }
