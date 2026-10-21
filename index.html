@@ -13,7 +13,7 @@
   --accent-hover: #a04040;
   --accent-fg: #fff;
   --panel-bg: #faf7f1;
-  --arrow-color: #8a7c6a;
+  --arrow-color: #b34000;
   --shadow: 0 2px 12px rgba(44,37,32,0.12);
   --c-water: #d6e2ec;
   --c-ah: #c4956a; --c-de: #7a8fa6; --c-ru: #8ba67a; --c-ot: #c9a86c;
@@ -26,7 +26,7 @@
     --bg: #181510; --fg: #ddd5c8; --fg-muted: #9a8d7e;
     --surface: #24201a; --surface-hover: #302a22; --border: #3e362a;
     --accent: #d4726a; --accent-hover: #e08078; --accent-fg: #1a1510;
-    --panel-bg: #1e1a14; --arrow-color: #7a6e60;
+    --panel-bg: #1e1a14; --arrow-color: #e8813a;
     --shadow: 0 2px 12px rgba(0,0,0,0.35);
     --c-water: #141e28;
     --c-ah: #9b7650; --c-de: #5c7088; --c-ru: #6b8860; --c-ot: #8a7a4a;
@@ -119,14 +119,14 @@ header p {
   pointer-events: none;
 }
 .cause-arrow {
-  fill: none; stroke: var(--arrow-color); stroke-width: 1.5;
-  opacity: 0.5; stroke-dasharray: 5,3;
+  fill: none; stroke: var(--arrow-color); stroke-width: 2.2;
+  opacity: 0.8; stroke-dasharray: 6,3;
 }
 
 /* ── Event list (sidebar) ── */
 .event-list {
   display: flex; flex-direction: column; gap: 10px;
-  max-height: 600px; overflow-y: auto; padding-right: 4px;
+  max-height: 950px; overflow-y: auto; padding-right: 4px;
 }
 .event-card {
   background: var(--surface); border: 1px solid var(--border);
@@ -198,7 +198,7 @@ header p {
 /* ── Arrow marker ── */
 
 /* ── Dossier panel ── */
-.dossier-panel { display: none; flex-direction: column; gap: 0; max-height: 600px; overflow-y: auto; padding-right: 4px; }
+.dossier-panel { display: none; flex-direction: column; gap: 0; max-height: 950px; overflow-y: auto; padding-right: 4px; }
 .dossier-panel.active { display: flex; }
 .dossier-back {
   display: inline-flex; align-items: center; gap: 5px;
@@ -550,7 +550,7 @@ const pathGen = d3.geoPath().projection(projection);
 // Arrow marker
 svg.append('defs').append('marker')
   .attr('id','ah').attr('viewBox','0 0 10 10')
-  .attr('refX',9).attr('refY',5).attr('markerWidth',5).attr('markerHeight',5)
+  .attr('refX',9).attr('refY',5).attr('markerWidth',6).attr('markerHeight',6)
   .attr('orient','auto-start-reverse')
   .append('path').attr('d','M0 1L10 5L0 9z').attr('fill','var(--arrow-color)');
 
