@@ -283,7 +283,7 @@ header p {
 .dossier-panel.active { display: flex; }
 .dossier-back {
   display: inline-flex; align-items: center; gap: 5px;
-  font: 500 0.9rem/1 'Inter', sans-serif; color: var(--accent);
+  font: 500 0.9em/1 'Inter', sans-serif; color: var(--accent);
   background: none; border: none; cursor: pointer; padding: 6px 0 10px;
 }
 .dossier-back:hover { text-decoration: underline; }
@@ -296,11 +296,11 @@ header p {
   border: 2px solid var(--border); flex-shrink: 0;
 }
 .dossier-title {
-  font-family: 'Crimson Pro', serif; font-size: 1.35rem; font-weight: 700;
+  font-family: 'Crimson Pro', serif; font-size: 1.35em; font-weight: 700;
   line-height: 1.2;
 }
 .dossier-subtitle {
-  font-size: 0.82rem; color: var(--fg-muted); margin-top: 2px;
+  font-size: 0.82em; color: var(--fg-muted); margin-top: 2px;
 }
 .dossier-section {
   margin-bottom: 12px;
@@ -308,37 +308,37 @@ header p {
 .dossier-section h3 {
   font-weight: 600;
   color: var(--accent); margin-bottom: 6px;
-  text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82em;
   font-family: 'Inter', sans-serif;
 }
 .dossier-section p, .dossier-section ul {
-  font-family: 'Crimson Pro', serif; font-size: 0.95rem;
+  font-family: 'Crimson Pro', serif; font-size: 0.95em;
   line-height: 1.7; color: var(--fg);
 }
 .dossier-section ul { padding-left: 18px; margin: 0; }
 .dossier-section li { margin-bottom: 5px; }
 .dossier-section li b { color: var(--fg); }
 .dossier-figure {
-  font-family: 'Crimson Pro', serif; font-size: 0.92rem;
+  font-family: 'Crimson Pro', serif; font-size: 0.92em;
   line-height: 1.6; color: var(--fg);
   background: var(--surface); border-radius: 6px; padding: 10px 12px;
   margin-bottom: 8px; border-left: 3px solid var(--accent);
 }
 .dossier-figure .fig-name {
-  font-weight: 700; font-size: 0.95rem;
+  font-weight: 700; font-size: 0.95em;
 }
 .dossier-figure .fig-role {
-  font-size: 0.82rem; color: var(--fg-muted); font-family: 'Inter', sans-serif;
+  font-size: 0.82em; color: var(--fg-muted); font-family: 'Inter', sans-serif;
 }
 .dossier-timeline-item {
-  font-family: 'Crimson Pro', serif; font-size: 0.92rem;
+  font-family: 'Crimson Pro', serif; font-size: 0.92em;
   line-height: 1.55; padding: 8px 12px; border-radius: 6px;
   background: var(--surface); margin-bottom: 5px; cursor: pointer;
   border: 1px solid transparent; transition: all 0.15s;
 }
 .dossier-timeline-item:hover { border-color: var(--accent); background: var(--surface-hover); }
 .dossier-timeline-item .dtl-year {
-  font-family: 'Inter', sans-serif; font-size: 0.82rem;
+  font-family: 'Inter', sans-serif; font-size: 0.82em;
   font-weight: 600; color: var(--accent);
 }
 .empire-highlight { opacity: 0.3; transition: opacity 0.2s; }
@@ -1589,6 +1589,7 @@ const ctNodes = [
   { id: 'congress-berlin', col:0, label: 'Congress of\nBerlin', date: '1878', color: 'var(--c-neutral)', title: 'Congress of Berlin', desc: 'After the Russo-Turkish War, the Congress of Berlin gave Austria-Hungary a mandate to occupy (but not annex) Bosnia-Herzegovina. This planted the seed — a temporary arrangement that hardened into permanent control 30 years later.' },
   { id: 'alsace-lorraine', col:0, label: 'Loss of Alsace-\nLorraine', date: '1871', color: 'var(--c-fr)', title: 'Loss of Alsace-Lorraine', desc: 'Germany\'s annexation of Alsace-Lorraine after the Franco-Prussian War created a wound in French national consciousness. Revanchism — the desire to recover the lost provinces — was a permanent undercurrent in French politics and a key reason France sought an alliance against Germany.', tags: ['France','Germany'] },
   { id: 'eastern-question', col:0, label: 'Eastern\nQuestion', color: 'var(--c-ot)', title: 'The "Eastern Question"', desc: 'For a century, European diplomats had wrestled with what would happen when the Ottoman Empire finally died. No one had an answer that satisfied all the great powers. The assassination at Sarajevo was, in a sense, the Eastern Question\'s final, fatal chapter.' },
+  { id: 'wilhelm-accession', col:0, label: 'Wilhelm II\nAccedes', date: '1888', color: 'var(--c-de)', title: 'Accession of Kaiser Wilhelm II', desc: 'The young Kaiser, impulsive and eager to rule personally, clashed with the aging Bismarck over foreign policy, colonial ambitions, and domestic reform. Wilhelm wanted to be his own chancellor — "the matter of the pilot," as he put it. Their power struggle ended in Bismarck\'s forced resignation in March 1890, replacing cautious diplomacy with the Kaiser\'s erratic Weltpolitik.', tags: ['Germany'] },
 
   /* col 1 — 1890s foundations */
   { id: 'bismarck-fall', col:1, label: 'Fall of\nBismarck', date: '1890', color: 'var(--c-de)', title: 'Fall of Bismarck', desc: 'Kaiser Wilhelm II dismissed Bismarck, ending the careful alliance management that had kept Russia neutral. The Reinsurance Treaty was not renewed. Clark sees this as a pivotal hinge — the moment Germany\'s diplomatic safety net began to unravel.', tags: ['Germany'] },
@@ -1602,8 +1603,8 @@ const ctNodes = [
   { id: 'moral-hazard', col:2, label: 'Clark\'s "Moral\nHazard"', color: 'var(--c-neutral)', title: 'Clark\'s "Moral Hazard" Argument', desc: 'Clark argues that alliances created moral hazard: they emboldened smaller allies (Serbia, Austria) to take risks they would never have taken alone, because they believed their great-power patrons would back them up. The tail wagged the dog.' },
 
   /* col 3 — 1908–1913: crises multiply */
-  { id: 'bosnia-annexation', col:3, label: 'Bosnia\nAnnexation', date: '1908', color: 'var(--c-ah)', title: 'Annexation of Bosnia-Herzegovina', desc: 'Austria-Hungary formally annexed Bosnia, which it had occupied since 1878. This outraged Serbia and Russia. The Bosnian Serb population felt trapped inside an empire they wanted no part of.', tags: ['Austria-Hungary'] },
-  { id: 'izvolsky-deal', col:3, label: 'Izvolsky–\nAehrenthal Deal', date: '1908', color: 'var(--c-ru)', title: 'The Izvolsky–Aehrenthal Deal', desc: 'Russian Foreign Minister Izvolsky secretly agreed with Austria\'s Aehrenthal to support annexation in exchange for Russian access to the Straits. Austria moved first; Russia got nothing. Izvolsky was humiliated — and Russia vowed never to back down again in the Balkans.', tags: ['Russia','Austria-Hungary'] },
+  { id: 'bosnia-annexation', col:3, label: 'Bosnia\nAnnexation', date: '1908', color: 'var(--c-ah)', title: 'Annexation of Bosnia-Herzegovina', desc: 'Austria-Hungary had occupied Bosnia since 1878 under a mandate from the Congress of Berlin, but never formally annexed it. By 1908, two developments forced Vienna\'s hand: the 1903 Serbian regicide had replaced a pro-Austrian dynasty with a pro-Russian one, and rising South Slav nationalism threatened to pull Bosnia\'s Serb population toward Belgrade. Foreign Minister Aehrenthal decided to make the occupation permanent before it was too late. The Young Turk revolution in Constantinople added urgency — a reformed Ottoman Empire might reassert its nominal sovereignty. The annexation outraged Serbia, which saw Bosnia as rightfully part of a future South Slav state, and humiliated Russia — Izvolsky\'s secret bargain with Aehrenthal at Buchlau collapsed amid mutual recriminations over what had actually been agreed.', tags: ['Austria-Hungary','Serbia'] },
+  { id: 'izvolsky-deal', col:3, label: 'Izvolsky–\nAehrenthal Deal', date: '1908', color: 'var(--c-ru)', title: 'The Buchlau Bargain', desc: 'At Buchlau castle (September 1908), Izvolsky and Aehrenthal met privately for six hours — no aides, no written record. They discussed a trade: Russia would accept the annexation; Austria would support Russian warship access to the Straits. But they left the room with different understandings. Aehrenthal believed it was a done deal. Izvolsky later claimed he had only agreed to discuss it at a future great-power conference. Clark argues the evidence shows Izvolsky lied: when Britain refused to support the Straits opening and Russian public opinion erupted, Izvolsky reinvented himself as Aehrenthal\'s victim to save his career. The result was the same — Russia felt cheated, and the humiliation shaped its determination never to back down again in the Balkans.', tags: ['Russia','Austria-Hungary'] },
   { id: 'humiliation-1908', col:3, label: '1908\nHumiliation', date: '1908–1909', color: 'var(--c-ru)', title: 'The Humiliation of 1908–1909', desc: 'During the Bosnian annexation crisis, Russia had to back down under German pressure because its army was not ready (still recovering from the 1905 defeat by Japan). Russian leaders vowed: never again. In 1914, backing down was psychologically impossible.', tags: ['Russia'] },
   { id: 'serbia-rise', col:3, label: 'Rise of Serbian\nNationalism', date: 'after 1903', color: 'var(--c-rs)', title: 'Rise of Serbian Nationalism after 1903', desc: 'The 1903 regicide replaced the pro-Austrian Obrenović dynasty with the pro-Russian Karadđorđević dynasty. Serbia pivoted from Austrian satellite to Russian protégé, pursuing an aggressive policy of South Slav unification.', tags: ['Serbia'] },
   { id: 'alliance-system', col:3, label: 'Alliance\nSystem', color: 'var(--c-neutral)', title: 'The Alliance System', desc: 'Two rigid blocs — the Triple Alliance (Germany, Austria-Hungary, Italy) and the Triple Entente (France, Russia, Britain) — meant that any crisis between two powers could drag in all six. Alliances that were meant to deter war instead ensured its spread.' },
@@ -1650,9 +1651,12 @@ const ctNodes = [
 /* Edges: source → target means "source led to / enabled target" */
 const ctEdges = [
   /* Deep roots → 1890s */
+  ['wilhelm-accession','bismarck-fall'],
   ['alsace-lorraine','franco-russian'],
   ['congress-berlin','bosnia-annexation'],
   ['eastern-question','ottoman-decline'],
+  ['regicide-1903','bosnia-annexation'],
+  ['ottoman-decline','bosnia-annexation'],
 
   /* 1890s → 1900s */
   ['bismarck-fall','franco-russian'],['bismarck-fall','encirclement'],
